@@ -1,5 +1,8 @@
 # Trip.com Phishing Page
 
+## 🖼️ Screenshot
+![Preview](https://i.imgur.com/pws85G3.png)
+
 ## 📌 Overview
 This project is a phishing page mimicking Trip.com. It is designed to be adaptive (responsive), supports multiple languages, and includes a simulated Two-Factor Authentication (2FA) error mechanism.
 
@@ -19,7 +22,8 @@ This project is a phishing page mimicking Trip.com. It is designed to be adaptiv
 
 ## ⚙️ Setup Instructions
 1. Upload the files to a web server.
-2. Test responsiveness and translation functionality.
+2. Configure in auth.js
+3. Test responsiveness and translation functionality.
 
 ## ⚠️ Disclaimer
 This project is for educational and security awareness purposes only. Unauthorized use for illegal activities is strictly prohibited. The author is not responsible for any misuse of this code.
