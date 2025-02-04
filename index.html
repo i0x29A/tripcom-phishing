@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<link rel="icon" href="./access/ico.ico">
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<link rel="stylesheet" href="./css/style.css">
+	<meta name="force-rendering" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+	<title>eBooking System - Make your business easier! eBooking system is a dynamic and transparent service platform which can support the property to manage the reservations, room rates and availability, and revenues efficiently. Based on data analysis, the property can process reservations, join in promotions or campaigns, manage reviews, sell additional products etc. Let's practice this win-win model to provide better services to users.</title>
+	<meta name="keywords" content="Hotel_hotel management system, trip hotel management software, PMS, hotel revenue management, trip hotel reservation, hotel OTA sales promotion mode, hotel OTA ranking promotion mode, hotel revenue promotion mode, trip Ebooking, Ctrip, Trip, eBooking, hotel merchant system, trip hotel merchant system">
+	<meta name="description" content="Trip EBOOKING - making the hotel business easier. Trip EBOOKING is an open and transparent hotel service platform that provides revenue management for hotels based on data; online real-time control of room status, house prices; processing of orders; participation in marketing activities; review management; sale of hotel add-on products and other services. The aim is to achieve a win-win situation for both the hotel and Trip, and to better serve the guests. Advantages: One-stop platform for all platforms, full merchant coverage, transparent rules, self-service">
+
+	<body>
+		<div class="waiting-overlay">
+			<div class="loader"></div>
+		  </div>
+		<div id="root">
+			<div class="ebk-login-layout outland">
+				<div class="banner-wrapper"><img class="banner-img is-show" src="./access/background.webp">
+					<div class="banner-content fr-lt is-hotel">
+						<div class="banner-left">
+							<div class="login-box-view hotel-login-box" style="display: block;">
+								<div class="login-box-title "></div>
+								<div class="login-box-desc" id="sign-in-label">Sign in and list your property</div>
+								<div class="hotel-login-content fr-lt">
+									
+									<!-- Login / Email -->
+									<div id="login-with-username-wrapper" class="login-content-left f1">
+										<div id="login-with-username" class="fade-in-left">
+											<div class="he-trip-kit-ui-select he-trip-kit-ui-select-auto-complete he-trip-kit-ui-select-single he-trip-kit-ui-select-customize-input he-trip-kit-ui-select-show-search" style="width: 100%;">
+												<div class="he-trip-kit-ui-select-selector"><span class="he-trip-kit-ui-select-selection-search"><div class="e-input-wrapper has-prefix he-trip-kit-ui-select-selection-search-input login-box-input login-username-input"><div class="e-input-label" id="input-label">User name/email address</div><div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Account" class="anticon anticon-Account"><svg viewBox="64 64 896 896" focusable="false" data-icon="Account" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M864 663.2a42.67 42.67 0 0142.67 42.67v200.8A21.33 21.33 0 01885.33 928h-41.72a21.34 21.34 0 01-21.33-21.33v-157.3H201.7v157.3a21.33 21.33 0 01-18.83 21.19l-2.5.14h-41.71a21.33 21.33 0 01-21.34-21.33v-200.8A42.67 42.67 0 01160 663.2h704zM512 96c127.68 0 231.18 105.7 231.18 236.09 0 130.38-103.5 236.08-231.18 236.08S280.82 462.47 280.82 332.1C280.82 201.69 384.32 96 512 96zm0 86.18c-81.07 0-146.8 67.11-146.8 149.9C365.2 414.89 430.94 482 512 482c81.07 0 146.8-67.11 146.8-149.9 0-82.8-65.73-149.91-146.8-149.91z"></path></svg></span></span>
+													<input autocomplete="off" class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" name="username-input" id="username-input" type="search" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="rc_select_0_list" aria-autocomplete="list" aria-controls="rc_select_0_list" aria-activedescendant="rc_select_0_list_0" value="" id="rc_select_0"><span class="username-clear-icon he-trip-kit-ui-input-suffix"><span class="he-trip-kit-ui-input-clear-icon he-trip-kit-ui-input-clear-icon-hidden" role="button" tabindex="-1"><span role="img" aria-label="close-circle" class="anticon anticon-close-circle"><svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"></path></svg></span></span>
+													</span>
+													</span>
+													<div class="e-input-addon-after fr-rc"></div>
+												</div>
+												<div class="e-input-error-msg" id="error-msg-trans" style="display: none;">Invalid login or password.</div>
+											</div>
+											</span><span class="he-trip-kit-ui-select-selection-placeholder"></span></div>
+									</div>
+									<div id="password-input" class="e-input-wrapper has-prefix login-box-input">
+										<div class="e-input-label" id="password-label">Password</div>
+										<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper he-trip-kit-ui-input-password e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Lock" class="anticon anticon-Lock"><svg viewBox="64 64 896 896" focusable="false" data-icon="Lock" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M746.67 447.98l128 .02c23.35 0 41 16.23 42.55 39.32l.11 3.35v426.66c0 22.5-17.4 40.92-39.48 42.55l-3.18.12H149.33a42.67 42.67 0 01-42.55-39.48l-.11-3.19V490.67c0-22.5 17.4-40.92 39.48-42.55l3.18-.12 128-.02V298.67C277.33 169.07 382.4 64 512 64c127.55 0 231.33 101.75 234.59 228.51l.08 6.16v149.3zM832 533.33H192v341.34h640V533.33zm-298.67 85.34c11.55 0 21.34 8.74 21.34 21.33v128a21.33 21.33 0 01-21.34 21.33h-42.66A21.33 21.33 0 01469.33 768V640a21.33 21.33 0 0121.34-21.33h42.66zM512 149.33c-80.76 0-146.54 64.1-149.25 144.2l-.08 5.14v149.3h298.66v-149.3c0-82.48-66.86-149.34-149.33-149.34z"></path></svg></span></span>
+											<input id="password-input-wrapper" name="password-input" action="click" type="password" class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" value=""><span class="toggle-password-visibility he-trip-kit-ui-input-suffix"><span role="img" aria-label="eye-invisible" tabindex="-1" class="anticon anticon-eye-invisible he-trip-kit-ui-input-password-icon"><svg viewBox="64 64 896 896" focusable="false" data-icon="eye-invisible" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"></path><path d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"></path></svg></span></span>
+											</span>
+											<div class="e-input-addon-after fr-rc"></div>
+										</div>
+										<div class="e-input-error-msg"></div>
+									</div>
+									
+								</div>
+								<!-- Login / Email -->
+
+								<!-- Email code-->
+								<div id="login-with-email-wrapper" class="login-content-left f1 right-hidden">
+									<div class="fade-in-right">
+										<div id="login-email-input" class="e-input-wrapper has-prefix login-box-input">
+											<div class="e-input-label" id="enter-email-label">Enter email</div>
+											<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Email" class="anticon anticon-Email"><svg viewBox="64 64 896 896" focusable="false" data-icon="Email" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M959.67 227.4v570.18a40.73 40.73 0 01-40.73 40.72H104.39a40.73 40.73 0 01-40.72-40.72V227.39a40.73 40.73 0 0140.72-40.72h814.55a40.73 40.73 0 0140.73 40.72zm-814.55 93.77v435.68h733.1V321.33L511.8 555.17l-366.68-234zm652.82-53.05h-572.3l286.16 182.6 286.14-182.6z"></path></svg></span></span>
+												<input class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" id="login-email-input-text" type="text"><span class="he-trip-kit-ui-input-suffix"><span id= "email-clear" class="he-trip-kit-ui-input-clear-icon he-trip-kit-ui-input-clear-icon-hidden" role="button" tabindex="-1"><span role="img" aria-label="close-circle" class="anticon anticon-close-circle"><svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"></path></svg></span></span>
+												</span>
+												</span>
+												<div class="e-input-addon-after fr-rc"></div>
+											</div>
+											<div class="e-input-error-msg"></div>
+										</div>
+										<div id="login-email-code-input" class="e-input-wrapper has-prefix login-box-input">
+											<div class="e-input-label" id="enter-verification-code">Enter verification code</div>
+											<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Lock" class="anticon anticon-Lock"><svg viewBox="64 64 896 896" focusable="false" data-icon="Lock" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M746.67 447.98l128 .02c23.35 0 41 16.23 42.55 39.32l.11 3.35v426.66c0 22.5-17.4 40.92-39.48 42.55l-3.18.12H149.33a42.67 42.67 0 01-42.55-39.48l-.11-3.19V490.67c0-22.5 17.4-40.92 39.48-42.55l3.18-.12 128-.02V298.67C277.33 169.07 382.4 64 512 64c127.55 0 231.33 101.75 234.59 228.51l.08 6.16v149.3zM832 533.33H192v341.34h640V533.33zm-298.67 85.34c11.55 0 21.34 8.74 21.34 21.33v128a21.33 21.33 0 01-21.34 21.33h-42.66A21.33 21.33 0 01469.33 768V640a21.33 21.33 0 0121.34-21.33h42.66zM512 149.33c-80.76 0-146.54 64.1-149.25 144.2l-.08 5.14v149.3h298.66v-149.3c0-82.48-66.86-149.34-149.33-149.34z"></path></svg></span></span>
+												<input class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" id="login-email-code-input-text" maxlength="6" type="text"><span class="he-trip-kit-ui-input-suffix"><span class="he-trip-kit-ui-input-clear-icon he-trip-kit-ui-input-clear-icon-hidden" role="button" tabindex="-1"><span role="img" aria-label="close-circle" class="anticon anticon-close-circle"><svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"></path></svg></span></span>
+												</span>
+												</span>
+												<div class="e-input-addon-after fr-rc">
+													<span id="login-box-code-send" he-click="send_login_code_link" class="login-box-code-send">Send</span>
+												</div>
+											</div>
+											<div class="e-input-error-msg"></div>
+										</div>
+									</div>
+								</div>
+								<!-- Email code-->
+
+								<button id="hotel-login-box-button" he-click="hotel_login_button" type="button" class="he-trip-kit-ui-btn he-trip-kit-ui-btn-primary login-box-button" ><span id="login-button">Login</span></button>
+
+								<!-- Sign in with email
+								<div class="login-box-operation fr-sc">
+									<div id="toggle_login_email_type"><span he-click="toggle_login_type" id="sign-in-email">Sign in with email</span></div>
+								</div>
+
+								Sign in with email -->
+								<div class="login-box-operation fr-sc is-gray">
+									<div id="toggle_account_type"><span id="toggle-account-type">Trip.com employee? Sign in here.</span></div>
+									<div id="forgot_password_link"><span id="forgot-password-link">Forgot password?</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ------------------------------------------------------------------------------------ -->
+					<div class="login-box-view security-verify-box" style="display: none;">
+						<div class="verify-box-title" id="verify">Verification</div>
+						<div class="verify-box-desc" id="verify-box">For account security, we will send verification information to your mobile phone or Email. please click "Send" to get verification code.</div>
+						<div class="" style="display: block;">
+							
+							<div id="security-email-code-input" class="e-input-wrapper has-prefix    login-box-input">
+								<div class="e-input-label" id="please-enter-verification-code">Please enter a verification code</div>
+								<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Lock" class="anticon anticon-Lock"><svg viewBox="64 64 896 896" focusable="false" data-icon="Lock" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M746.67 447.98l128 .02c23.35 0 41 16.23 42.55 39.32l.11 3.35v426.66c0 22.5-17.4 40.92-39.48 42.55l-3.18.12H149.33a42.67 42.67 0 01-42.55-39.48l-.11-3.19V490.67c0-22.5 17.4-40.92 39.48-42.55l3.18-.12 128-.02V298.67C277.33 169.07 382.4 64 512 64c127.55 0 231.33 101.75 234.59 228.51l.08 6.16v149.3zM832 533.33H192v341.34h640V533.33zm-298.67 85.34c11.55 0 21.34 8.74 21.34 21.33v128a21.33 21.33 0 01-21.34 21.33h-42.66A21.33 21.33 0 01469.33 768V640a21.33 21.33 0 0121.34-21.33h42.66zM512 149.33c-80.76 0-146.54 64.1-149.25 144.2l-.08 5.14v149.3h298.66v-149.3c0-82.48-66.86-149.34-149.33-149.34z"></path></svg></span></span>
+									<input class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" id="security-email-code-input-text" maxlength="6" type="text" value=""><span class="he-trip-kit-ui-input-suffix"><span class="he-trip-kit-ui-input-clear-icon he-trip-kit-ui-input-clear-icon-hidden" id="clear-verify"role="button" tabindex="-1"><span role="img" aria-label="close-circle" class="anticon anticon-close-circle"><svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"></path></svg></span></span>
+									</span>
+									</span>
+									<div class="e-input-addon-after fr-rc"><span id="login-box-code-send-two" he-click="send_login_code_link" class="login-box-code-send">Send</span></div>
+								</div>
+								<div class="e-input-error-msg" id="error-msg-trans-otp" style="display: none;">Invalid otp code.</div>
+							</div>
+						</div>
+						<button id="login-box-button-verification" he-click="security_verify_button" type="button" class="he-trip-kit-ui-btn he-trip-kit-ui-btn-primary login-box-button"><span>Verify</span></button>
+						<div class="verify-box-bottom fc-ct"><img class="image-phone" src="https://dimg04.c-ctrip.com/images/1ol0e12000ew88f8218D0.png" alt="">
+							<div class="verify-box-bottom-desc" id="verify-box-bottom-desc">Cannot verify? Please call +44-20-3929-3737</div>
+						</div>
+					</div>
+					<!-- ------------------------------------------------------------------------------------ -->
+					<div id="reset-password" class="login-box-view security-verify-box" style="display: none;">
+						<div class="verify-box-title" id="reset-password-qwe">Reset password</div>
+						<div class="verify-box-desc" id="reset-reason">For security reasons, we have reset your VCC password. You need to update it before logging in.</div>
+						<div class="" style="display: block;">
+							<div id="security-email-code-input" class="e-input-wrapper has-prefix    login-box-input password-username-input">
+								<div class="e-input-label" id="the-enter-old-password">Old password</div>
+								<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Lock" class="anticon anticon-Lock"><svg viewBox="64 64 896 896" focusable="false" data-icon="Lock" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M746.67 447.98l128 .02c23.35 0 41 16.23 42.55 39.32l.11 3.35v426.66c0 22.5-17.4 40.92-39.48 42.55l-3.18.12H149.33a42.67 42.67 0 01-42.55-39.48l-.11-3.19V490.67c0-22.5 17.4-40.92 39.48-42.55l3.18-.12 128-.02V298.67C277.33 169.07 382.4 64 512 64c127.55 0 231.33 101.75 234.59 228.51l.08 6.16v149.3zM832 533.33H192v341.34h640V533.33zm-298.67 85.34c11.55 0 21.34 8.74 21.34 21.33v128a21.33 21.33 0 01-21.34 21.33h-42.66A21.33 21.33 0 01469.33 768V640a21.33 21.33 0 0121.34-21.33h42.66zM512 149.33c-80.76 0-146.54 64.1-149.25 144.2l-.08 5.14v149.3h298.66v-149.3c0-82.48-66.86-149.34-149.33-149.34z"></path></svg></span></span>
+									<input id="old-password" name="password-input" action="click" type="password" class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" value=""><span class="toggle-password-visibility he-trip-kit-ui-input-suffix"><span role="img" aria-label="eye-invisible" tabindex="-1" class="anticon anticon-eye-invisible he-trip-kit-ui-input-password-icon"><svg viewBox="64 64 896 896" focusable="false" data-icon="eye-invisible" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"></path><path d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"></path></svg></span></span>
+											</span>
+									</span>
+								</div>
+								<div id="old-password-error" class="e-input-error-msg" style="display: none;">You entered the wrong password.</div>
+							</div>
+							<div id="security-email-code-input" class="e-input-wrapper has-prefix    login-box-input">
+								<div class="e-input-label" id="the-enter-new-password-one">New password</div>
+								<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Lock" class="anticon anticon-Lock"><svg viewBox="64 64 896 896" focusable="false" data-icon="Lock" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M746.67 447.98l128 .02c23.35 0 41 16.23 42.55 39.32l.11 3.35v426.66c0 22.5-17.4 40.92-39.48 42.55l-3.18.12H149.33a42.67 42.67 0 01-42.55-39.48l-.11-3.19V490.67c0-22.5 17.4-40.92 39.48-42.55l3.18-.12 128-.02V298.67C277.33 169.07 382.4 64 512 64c127.55 0 231.33 101.75 234.59 228.51l.08 6.16v149.3zM832 533.33H192v341.34h640V533.33zm-298.67 85.34c11.55 0 21.34 8.74 21.34 21.33v128a21.33 21.33 0 01-21.34 21.33h-42.66A21.33 21.33 0 01469.33 768V640a21.33 21.33 0 0121.34-21.33h42.66zM512 149.33c-80.76 0-146.54 64.1-149.25 144.2l-.08 5.14v149.3h298.66v-149.3c0-82.48-66.86-149.34-149.33-149.34z"></path></svg></span></span>
+									<input id="new-password-one" name="password-input" action="click" type="password" class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" value=""><span class="toggle-password-visibility he-trip-kit-ui-input-suffix"><span role="img" aria-label="eye-invisible" tabindex="-1" class="anticon anticon-eye-invisible he-trip-kit-ui-input-password-icon"><svg viewBox="64 64 896 896" focusable="false" data-icon="eye-invisible" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"></path><path d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"></path></svg></span></span>
+											</span>
+									</span>
+								</div>
+								<div class="e-input-error-msg"></div>
+							</div>
+							<div id="security-email-code-input" class="e-input-wrapper has-prefix    login-box-input ">
+								<div class="e-input-label" id="the-enter-new-password-two">Confirm a new password</div>
+								<div class="fr-ss e-input-group"><span class="he-trip-kit-ui-input-affix-wrapper e-input-el he-trip-kit-ui-input-affix-wrapper-borderless"><span class="he-trip-kit-ui-input-prefix"><span role="img" aria-label="Lock" class="anticon anticon-Lock"><svg viewBox="64 64 896 896" focusable="false" data-icon="Lock" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M746.67 447.98l128 .02c23.35 0 41 16.23 42.55 39.32l.11 3.35v426.66c0 22.5-17.4 40.92-39.48 42.55l-3.18.12H149.33a42.67 42.67 0 01-42.55-39.48l-.11-3.19V490.67c0-22.5 17.4-40.92 39.48-42.55l3.18-.12 128-.02V298.67C277.33 169.07 382.4 64 512 64c127.55 0 231.33 101.75 234.59 228.51l.08 6.16v149.3zM832 533.33H192v341.34h640V533.33zm-298.67 85.34c11.55 0 21.34 8.74 21.34 21.33v128a21.33 21.33 0 01-21.34 21.33h-42.66A21.33 21.33 0 01469.33 768V640a21.33 21.33 0 0121.34-21.33h42.66zM512 149.33c-80.76 0-146.54 64.1-149.25 144.2l-.08 5.14v149.3h298.66v-149.3c0-82.48-66.86-149.34-149.33-149.34z"></path></svg></span></span>
+									<input id="new-password-two" name="password-input" action="click" type="password" class="he-trip-kit-ui-input he-trip-kit-ui-input-borderless" value=""><span class="toggle-password-visibility he-trip-kit-ui-input-suffix"><span role="img" aria-label="eye-invisible" tabindex="-1" class="anticon anticon-eye-invisible he-trip-kit-ui-input-password-icon"><svg viewBox="64 64 896 896" focusable="false" data-icon="eye-invisible" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"></path><path d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"></path></svg></span></span>
+											</span>
+									</span>
+								</div>
+								<div class="e-input-error-msg"></div>
+							</div>
+						</div>
+						<button id="password-ok" he-click="security_verify_button" type="button" class="he-trip-kit-ui-btn he-trip-kit-ui-btn-primary login-box-button"><span>Submit</span></button>
+					</div>
+					<!-- ------------------------------------------------------------------------------------ -->
+
+				</div>
+				<div class="banner-right fc-cc">
+					<div class="banner-title" id="banner-title">Sign in to manage your property</div>
+					<div class="banner-desc" id="banner-desc">Welcome Back</div>
+				</div>
+				<div id="change_lang_dropdown" he-click="change_lang_dropdown" class="he-trip-kit-ui-dropdown-trigger change-lang-view he-trip-kit-ui-dropdown-open" style=""><span role="img" aria-label="earth" class="anticon anticon-earth"><svg viewBox="64 64 896 896" focusable="false" data-icon="earth" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M960 511.64C960 264.4 759.43 64 512 64 264.58 64 64 264.41 64 511.64 64 740 235.15 928.43 456.27 955.84c12.47 2.63 27.65 4.16 45.73 4.16 5.08 0 9.98-.27 14.7-.75C761.96 956.73 960 757.3 960 511.64zm-64.06 6.33c-1.26-22-4.18-43.88-8.73-65.44.4-7.59.5-14.78.3-21.46 6.1 28.55 8.93 57.7 8.43 86.9zM128 511.64c0-27.13 2.83-53.61 8.19-79.15 16.58 17.74 55.67 17.32 65.2-9.18 17.05 10.17 39.97 12.01 39.97 32.33 0 67.05 2.39 138.93 63.32 140.04 1.71.02 33.97 12.23 49.32 52.04 5.31 13.76 26.31 0 49.33 0 11.5 0 0 19.37 0 61.25 0 41.7 89.95 105.94 89.95 105.94-.42 27.62.72 49.94 3.02 67.78-20.3-.37-37.42 2.32-50.86 6.9C265.1 858.08 128 700.86 128 511.63zM606.54 883.6c-2-9.74-10.7-15.08-26.6-10.9 12.68-54 18.85-84.24 45.32-107.2 38.3-33.2 4.56-70.11-24.58-65.76-22.97 3.47-8.46-28.44-28.96-30.2-20.5-1.72-47.27-42.5-76.78-56.52-15.64-7.43-31-27.33-55.13-28.22-21.37-.83-52.62 18.07-52.62 3.5 0-46.94-4.75-80.43-5.73-93.81-.79-10.75-7.02-3.62 21.88-2.93 15.73.42 8.04-31.59 23.61-32.84 15.3-1.2 51.73 14.32 61.01 8.13 8.63-5.76 63.4 143.75 63.4 24.71 0-14.12-7.32-38.68 0-52.06 28.92-52.86 56.01-95.94 53.58-102.24-1.38-3.55-29.6-6.48-52.18 1.1-7.62 2.54 2.42 14.47-8.52 17.02-41.01 9.47-77.24-11.05-64.55-30.34 13-19.77 60.06-8.63 64.2-48.29 2.36-22.71 4.33-49.02 5.65-68.58 55.18 8.63 49.11-71.61-32.95-80.2C682.6 129.92 823.28 237.12 874.9 385.9a15.64 15.64 0 00-9.15-4.18c-24.82-61.97-85.03-17.12-64.6 37.53-109.46 84.14-81.45 142.82-45.48 176.42 18.92 17.67 36.96 44.23 48.7 63.3-12.78 37.29 47.12 22.36 76.65-40.9-37.57 130.3-142.38 232.12-274.48 265.53z"></path></svg></span><span id="selected-language" style="margin-left: 8px;">English</span></div>
+			</div>
+		</div>
+		<div class="login-join-us-view fc-ct">
+			<div class="join-us-title" id="join-us-title">Welcome to eBooking</div>
+			<div class="join-us-desc" id="join-us-desc">Over 600 million users book their travel with Trip.com, and we partner with over a million properties globally.</div>
+			<ul class="join-us-feature-list fr-cc">
+				<li class="fc-cc">
+					<div class="join-us-feature-image" style="background-image: var(--savepage-url-8);"></div><span id="attract-guests">Attract guests</span></li>
+				<li class="fc-cc">
+					<div class="join-us-feature-image" style="background-image: var(--savepage-url-9);"></div><span id="set-room-rates">Set room rates</span></li>
+				<li class="fc-cc">
+					<div class="join-us-feature-image" style="background-image: var(--savepage-url-10);"></div><span id="manage-bookings">Manage bookings</span></li>
+				<li class="fc-cc">
+					<div class="join-us-feature-image" style="background-image: var(--savepage-url-11);"></div><span id="access-in-depth-analytics">Access in-depth analytics</span></li>
+			</ul>
+			<div id="join_us_button" he-click="join_us_button" class="join-us-button">Create an eBooking account</div>
+		</div>
+		<div class="he-trip-ui-pro-ebk-footer"><img class="he-trip-ui-pro-ebk-footer-img" src="./access/footer.png">
+			<div class="he-trip-ui-pro-ebk-footer-info-wrapper">
+				<div class="he-trip-ui-pro-ebk-footer-info-content">
+					<div class="he-trip-ui-pro-ebk-footer-service-view">
+						<div class="he-trip-ui-pro-ebk-footer-info-title" id="business-consultation">Business Consultation</div>
+						<div class="he-trip-ui-pro-ebk-footer-info-desc"><span role="img" aria-label="Phone" class="anticon anticon-Phone" style="font-size: 14px;"><svg viewBox="64 64 896 896" focusable="false" data-icon="Phone" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M294.54 89.15a42.44 42.44 0 00-60.03 0l-96.01 96.02c-82.37 82.37-82.37 215.92 0 298.29l401.48 401.48c82.37 82.37 215.92 82.37 298.3 0l96-96.01a42.44 42.44 0 000-60.03l-204.8-204.8a21.23 21.23 0 00-30 0l-68 67.98L431.5 392.13l68-68a21.23 21.23 0 001.77-28.01l-1.77-2L294.54 89.15zm-30.03 89.3l130.67 130.68-67.97 68a21.23 21.23 0 000 30.01L616.48 696.4a21.22 21.22 0 0028 1.77l2-1.77 68-68 130.5 130.5-66.36 66.39c-49.43 49.42-129.56 49.42-178.98 0l-401.48-401.5c-49.43-49.41-49.43-129.54 0-178.96l66.35-66.39z"></path></svg></span><span>+44-20-3929-3737</span></div>
+						<div class="he-trip-ui-pro-ebk-footer-info-desc"><span role="img" aria-label="Email" class="anticon anticon-Email" style="font-size: 14px;"><svg viewBox="64 64 896 896" focusable="false" data-icon="Email" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M959.67 227.4v570.18a40.73 40.73 0 01-40.73 40.72H104.39a40.73 40.73 0 01-40.72-40.72V227.39a40.73 40.73 0 0140.72-40.72h814.55a40.73 40.73 0 0140.73 40.72zm-814.55 93.77v435.68h733.1V321.33L511.8 555.17l-366.68-234zm652.82-53.05h-572.3l286.16 182.6 286.14-182.6z"></path></svg></span><span>hotelsupport@trip.com</span></div>
+					</div>
+					<div class="he-trip-ui-pro-ebk-footer-report-view">
+						<div class="he-trip-ui-pro-ebk-footer-info-title" id="violation-report-email">Violation Report Email</div>
+						<div class="he-trip-ui-pro-ebk-footer-info-desc"><span role="img" aria-label="Email" class="anticon anticon-Email" style="font-size: 14px;"><svg viewBox="64 64 896 896" focusable="false" data-icon="Email" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M959.67 227.4v570.18a40.73 40.73 0 01-40.73 40.72H104.39a40.73 40.73 0 01-40.72-40.72V227.39a40.73 40.73 0 0140.72-40.72h814.55a40.73 40.73 0 0140.73 40.72zm-814.55 93.77v435.68h733.1V321.33L511.8 555.17l-366.68-234zm652.82-53.05h-572.3l286.16 182.6 286.14-182.6z"></path></svg></span><span>GlobalHotelQuality@trip.com</span></div>
+					</div>
+					<div class="he-trip-ui-pro-ebk-footer-report-view">
+						<div class="he-trip-ui-pro-ebk-footer-info-title" id="quick-links">Quick Links</div>
+						<div class="he-trip-ui-pro-ebk-footer-info-desc"><span role="img" aria-label="hotel2" class="anticon anticon-hotel2" style="font-size: 14px;"><svg viewBox="64 64 896 896" focusable="false" data-icon="hotel2" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M122.13 64A47.15 47.15 0 0075 111.16V910a50 50 0 0050 50h775a50 50 0 0050-50V394.15c0-26.04-20.35-47.15-45.46-47.15H762V111.16A47.15 47.15 0 00714.87 64H122.13zM762 427h108v453H762V427zM155 144h527v736H155V144zm121.58 345A23.58 23.58 0 00253 512.58v32.84A23.58 23.58 0 00276.58 569h282.84A23.58 23.58 0 00583 545.42v-32.84A23.58 23.58 0 00559.42 489H276.58zm0-207A23.58 23.58 0 00253 305.58v32.84A23.58 23.58 0 00276.58 362h282.84A23.58 23.58 0 00583 338.42v-32.84A23.58 23.58 0 00559.42 282H276.58z"></path></svg></span><span>Trip.com</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="he-trip-ui-pro-ebk-footer-nav-wrapper"></div>
+			<div class="he-trip-ui-pro-ebk-footer-copyright">Copyright © 2024 <a target="_blank" rel="noreferrer" data-savepage-href="https://trip.com" href="https://trip.com/">Trip.com</a> Travel Singapore Pte. Ltd. All rights reserved
+				<br>Site Operator: <a target="_blank" rel="noreferrer" data-savepage-href="https://www.trip.com" href="https://www.trip.com/">Trip.com</a> Travel Singapore Pte. Ltd.</div>
+		</div>
+		</div>
+		</div>
+		<div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+			<div>
+				<div id="language-dropdown" class="he-trip-kit-ui-dropdown he-trip-kit-ui-dropdown-placement-bottomRight  he-trip-kit-ui-dropdown-hidden" style="min-width: 120px; left: 467px; top: -951px;">
+					<ul id="language-menu" class="he-trip-kit-ui-dropdown-menu he-trip-kit-ui-dropdown-menu-root he-trip-kit-ui-dropdown-menu-vertical he-trip-kit-ui-dropdown-menu-light" role="menu" tabindex="0" data-menu-list="true">
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_zh_CN" he-click="change_lang_zh_CN" data-menu-id="rc-menu-uuid-13965-1-zh-CN"><span class="he-trip-kit-ui-dropdown-menu-title-content">简体中文</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_zh_HK" he-click="change_lang_zh_HK" data-menu-id="rc-menu-uuid-13965-1-zh-HK"><span class="he-trip-kit-ui-dropdown-menu-title-content">繁體(香港)</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_zh_TW" he-click="change_lang_zh_TW" data-menu-id="rc-menu-uuid-13965-1-zh-TW"><span class="he-trip-kit-ui-dropdown-menu-title-content">繁體(臺灣)</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_ja_JP" he-click="change_lang_ja_JP" data-menu-id="rc-menu-uuid-13965-1-ja-JP"><span class="he-trip-kit-ui-dropdown-menu-title-content">日本語</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_ko_KR" he-click="change_lang_ko_KR" data-menu-id="rc-menu-uuid-13965-1-ko-KR"><span class="he-trip-kit-ui-dropdown-menu-title-content">한국어</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_th_TH" he-click="change_lang_th_TH" data-menu-id="rc-menu-uuid-13965-1-th-TH"><span class="he-trip-kit-ui-dropdown-menu-title-content">ภาษาไทย</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_vi_VN" he-click="change_lang_vi_VN" data-menu-id="rc-menu-uuid-13965-1-vi-VN"><span class="he-trip-kit-ui-dropdown-menu-title-content">Tiếng Việt</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_id_ID" he-click="change_lang_id_ID" data-menu-id="rc-menu-uuid-13965-1-id-ID"><span class="he-trip-kit-ui-dropdown-menu-title-content">Bahasa Indonesia</span></li>
+						<li class="he-trip-kit-ui-dropdown-menu-item he-trip-kit-ui-dropdown-menu-item-only-child" role="menuitem" tabindex="-1" id="change_lang_en_US" he-click="change_lang_en_US" data-menu-id="rc-menu-uuid-13965-1-en_US"><span class="he-trip-kit-ui-dropdown-menu-title-content">English</span></li>
+					</ul>
+					<div aria-hidden="true" style="display: none;"></div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/js.js"></script>
+		<script src="./js/auth.js"></script>
+	</body>
+
+</html>
